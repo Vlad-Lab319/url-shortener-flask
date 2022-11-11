@@ -6,29 +6,55 @@ URL Shortener
 
 {% block main %}
 
-<h1>URL Shortener</h1>
+<div class="container">
+  <div class="card-deck mb-3">
+      <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal text-center">Website</h4>
+          </div>
+          <div class="card-body">
+            <form action="your-url" method="post">
+                <label for="code01">Short name</label>
+                <input type="text" name="code" id="code01" value="" required class="form-control">
+                <br>
+                <label for="url">Website URL</label>
+                <div class="input-group mb-3">
+                    <input type="url" name="url" id="url" value="" required class="form-control">
+                </div>
+                <button class="btn btn-primary btn-lg btn-block">Shorten</button>
+            </form>
+          </div>
+      </div>
 
-<form action="your-url" method="post">
-    <label for="url">Website URL</label>
-        <input type="url" name="url" value="" required>
-    <br>
-    <label for="code">Short name</label>
-        <input type="text" name="code" value="" required>
-    <br>
-        <input type="submit" value="Shorten">
+      <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal text-center">File</h4>
+          </div>
+          <div class="card-body">
+            <form action="your-url" method="post" enctype="multipart/form-data">
+                <label for="code02">Short name</label>
+                <input type="text" name="code" id="code02" value="" required class="form-control">
+                <br>
+                <label for="inputGroupFile01">File</label>
+                <div class="input-group mb-3">
+                  <div class="custom-file">
+                    <input type="file" name="file" class="custom-file-input" id="inputGroupFile01" value="" required>
+                    <label class="custom-file-label" for="inputGroupFile01"></label>
+                  </div>
+                </div>
+                <script>
+                    $('#inputGroupFile01').on('change',function(){
+                    const fileName = $(this).val();
+                    $(this).next('.custom-file-label').html(fileName);
+                    })
+                </script>
+                <button class="btn btn-primary btn-lg btn-block">Shorten</button>
+            </form>
+          </div>
+      </div>
+  </div>
+</div>
 
-</form>
-
-<form action="your-url" method="post" enctype="multipart/form-data">
-    <label for="file">File</label>
-        <input type="file" name="file" value="" required>
-    <br>
-    <label for="code">Short name</label>
-        <input type="text" name="code" value="" required>
-    <br>
-        <input type="submit" value="Shorten">
-
-</form>
 
 {% if codes %}
 <h2>Codes you have created</h2>

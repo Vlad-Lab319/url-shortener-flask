@@ -5,7 +5,23 @@ URL for {{ code }}
 {% endblock %}
 
 {% block main %}
-<h1>Your URL</h1>
 
-<h2>{{ code }}</h2>
+<div class="container text-center">
+    <h1 class="jumbotron-heading">URL Created</h1>
+    <input class="lead" id="new_url" value="{{ url_for('urlshort.redirect_to_url', code=code, _external=True )}}" readonly>
+    <p>
+        <button onclick="copyURL()" class="btn btn-primary my-2">
+            Copy URL
+        </button>
+    </p>
+    <h2>{{ code }}</h2>
+</div>
+
+<script>
+    function copyURL() {
+        const copyText = document.getElementById("new_url");
+        copyText.select();
+        document.execCommand('copy');
+    }
+</script>
 {% endblock %}
