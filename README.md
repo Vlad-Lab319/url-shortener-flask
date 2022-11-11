@@ -4,9 +4,9 @@ URL minification web app build with **Flask** and templates (Jinja), using bluep
 Styled with **Bootstrap**
 
 ## Screenshots
-!["Home page"](https://github.com/Vlad-Lab319/url-shortener-flask/tree/main/screenshots/Screenshot_main.png)
-!["New URL"](https://github.com/Vlad-Lab319/url-shortener-flask/tree/main/screenshots/Screenshot_url_created.png)
-!["API"](https://github.com/Vlad-Lab319/url-shortener-flask/tree/main/screenshots/Screenshot_api.png)
+!["Home page"](https://github.com/Vlad-Lab319/url-shortener-flask/blob/main/screenshots/Screenshot_main.png)
+!["New URL"](https://github.com/Vlad-Lab319/url-shortener-flask/blob/main/screenshots/Screenshot_url_created.png)
+!["API"](https://github.com/Vlad-Lab319/url-shortener-flask/blob/main/screenshots/Screenshot_api.png)
 
 ## Add 
 static/user_files/
