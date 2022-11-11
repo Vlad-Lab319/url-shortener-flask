@@ -167,4 +167,4 @@ cython_debug/
 
 # Project dummy load files
 urls.json
-static/user_files/*.*
+urlshort/static/user_files/*.*
